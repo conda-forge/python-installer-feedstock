@@ -1,6 +1,6 @@
 {% set name = "python-installer" %}
 {% set pypi_name = "installer" %}
-{% set version = "0.2.3" %}
+{% set version = "0.3.0" %}
 
 
 package:
@@ -9,11 +9,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ pypi_name[0] }}/{{ pypi_name }}/{{ pypi_name }}-{{ version }}.tar.gz
-  sha256: 82c899f5e3c78303242df9c9ca7ac58001c9806d8c23fa2772be769d1f560fe5
+  sha256: e7dc5ec8b737fe3fa7c1872a6ebe120d7abc7cf780aa39af669c382a0fcb6de7
 
 build:
   number: 0
-  skip: true   # [py==30 or py==31 or py==32 or py==33 or py==34]
+  skip: true  # [py==30 or py==31 or py==32 or py==33 or py==34]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
