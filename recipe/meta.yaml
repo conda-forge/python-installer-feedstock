@@ -13,23 +13,20 @@ source:
 
 build:
   number: 0
-  skip: true  # [py==30 or py==31 or py==32 or py==33 or py==34]
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
-    - flit-core >=2,<3
+    - python >=3.7
+    - flit-core >=3.2.0,<4
   run:
-    - configparser >=3.5  # [py<3]
-    - importlib_resources  # [py<37]
-    - python
+    - python >=3.7
 
 test:
   imports:
     - installer
-    - installer._compat
 
 about:
   home: https://github.com/pradyunsg/installer
