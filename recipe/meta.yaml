@@ -1,6 +1,6 @@
 {% set name = "python-installer" %}
 {% set pypi_name = "installer" %}
-{% set version = "0.5.0" %}
+{% set version = "0.3.0" %}
 
 
 package:
@@ -9,21 +9,22 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ pypi_name[0] }}/{{ pypi_name }}/{{ pypi_name }}-{{ version }}.tar.gz
-  sha256: 0cd6bdab3b358cf7e8749370b99aef9e12202751271c5ddb22126599b34dc665
+  sha256: e7dc5ec8b737fe3fa7c1872a6ebe120d7abc7cf780aa39af669c382a0fcb6de7
 
 build:
   number: 0
-  noarch: python
+  skip: true  # [py==30 or py==31 or py==32 or py==33 or py==34]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
-    - flit-core >=3.2.0,<4
+    - python
+    - flit-core >=2,<3
   run:
-    - python >=3.7
-
+    - configparser >=3.5  # [py<3]
+    - importlib_resources  # [py<37]
+    - python
 test:
   imports:
     - installer
