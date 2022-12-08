@@ -1,6 +1,6 @@
 {% set name = "python-installer" %}
 {% set pypi_name = "installer" %}
-{% set version = "0.5.1" %}
+{% set version = "0.6.0" %}
 
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ pypi_name[0] }}/{{ pypi_name }}/{{ pypi_name }}-{{ version }}.tar.gz
-  sha256: f970995ec2bb815e2fdaf7977b26b2091e1e386f0f42eafd5ac811953dc5d445
+  sha256: f3bd36cd261b440a88a1190b1becca0578fee90b4b62decc796932fdd5ae8839
 
 build:
   number: 0
