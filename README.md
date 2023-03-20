@@ -1,11 +1,11 @@
-About python-installer
-======================
+About python-installer-feedstock
+================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-installer-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/pradyunsg/installer
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-installer-feedstock/blob/main/LICENSE.txt)
 
 Summary: A library for installing Python wheels.
 
