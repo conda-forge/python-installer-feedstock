@@ -1,6 +1,4 @@
 build_platform:
-  osx_arm64: osx_64
-  linux_aarch64: linux_64
   linux_ppc64le: linux_64
 conda_forge_output_validation: true
 github:
@@ -11,3 +9,6 @@ conda_build:
 bot:
   automerge: true
   inspection: update-grayskull
+provider:
+  linux_aarch64: default
+  osx_arm64: default
